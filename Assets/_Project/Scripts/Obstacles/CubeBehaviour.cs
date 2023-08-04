@@ -15,7 +15,7 @@ namespace _Project.Scripts.Obstacles
         
         [Inject] private ResetSceneButton _resetSceneButton;
 
-        private void Start()
+        private void Awake()
         {
             _startPosition = transform.position;
             _startRotation = transform.rotation;
@@ -25,12 +25,18 @@ namespace _Project.Scripts.Obstacles
 
         public void Reset()
         {
-            rb.isKinematic = true;
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+            }
             transform.DOMove(_startPosition, _resetSceneButton.ResetDuration).SetEase(Ease.Linear);
             transform.DORotateQuaternion(_startRotation, _resetSceneButton.ResetDuration).SetEase(Ease.Linear).OnComplete(
                 () =>
                 {
-                    rb.isKinematic = false;
+                    if (rb != null)
+                    {
+                        rb.isKinematic = false;
+                    }
                 });
         }
     }

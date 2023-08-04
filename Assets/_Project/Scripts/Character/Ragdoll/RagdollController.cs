@@ -42,8 +42,6 @@ namespace _Project.Scripts.Character
                 _ragdollBones [i] = new BoneTransform();
             }
 
-            PopulateAnimationStartBoneTransforms(standUpClipName,_standingBones);
-            
             DisableRagdoll(); 
             
             _resetSceneButton.OnClick += Reset;
@@ -86,6 +84,7 @@ namespace _Project.Scripts.Character
             AlignRotationToHips();
             
             PopulateBoneTransforms(_ragdollBones);
+            PopulateAnimationStartBoneTransforms(standUpClipName,_standingBones);
 
             StartCoroutine(ResetBones());
         }
