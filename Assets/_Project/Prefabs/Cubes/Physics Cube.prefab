@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6950681682451984747}
   - component: {fileID: 7478757102161510570}
   - component: {fileID: 8006397333059166281}
+  - component: {fileID: -1859965463262042555}
   m_Layer: 0
   m_Name: Physics Cube
   m_TagString: Untagged
@@ -114,3 +115,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1859965463262042555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601560515669021468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: defa7856d9234186a4992da707137b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8006397333059166281}
